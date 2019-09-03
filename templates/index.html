@@ -1,0 +1,291 @@
+<!--index.html-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Link to the css file-->
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css"
+        integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous" />
+    <!-- Link for Source Code Pro fonts (font-family: 'Source Code Pro', monospace;) -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <title>We Love Alessia Cara</title>
+</head>
+<body>
+    <header>
+        <div class = "container">
+            <div id = "navbar">
+                <div class = "nav-item">
+                    <a href="http://www.alessiacara.com/home" target="_blank">Music</a>
+                </div>
+                <div class = "nav-item">
+                    <a href="http://www.alessiacara.com/home" target="_blank">Bio</a>
+                </div>
+                <div class = "nav-item">
+                    <a href="http://www.alessiacara.com/home" target="_blank">Photos</a>
+                </div>
+                <div class = "nav-item">
+                    <a href="https://shop.alessiacara.com/" target="_blank">Shop</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <section id = "big-image">
+        <div class = "container">
+            <img class = "front-image" src="{{random_image_url}}"></img>
+        </div>
+    </section>
+    
+    <section id = "about-artist">
+        <div class = "container">
+            <div class = "about-flex">
+                <div class = "profile-pic">
+                    <img class = "small-image" src="/static/beauty.jpg"></img>
+                </div>
+                <div class = "about">
+                    <h1><a href="https://genius.com/artists/Alessia-cara" target="_blank">Alessia Cara</a></h1>
+                    <p class = "album-name">{{random_album}}</p>
+                    <p><a class = "view-lyrics" href="{{random_lyrics_url}}" target="_blank">View Lyrics</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id = "tweet-section">
+        <div class = container>
+            <div class = "tweet-text">
+                <!--Content generated via Twitter API-->
+                <p class = "recent-tweet-title"><i class="fab fa-twitter"></i> Recent tweets: </p>
+                <p class = "recent-tweet-text">{{random_tweet}}</p>
+                <div class = "more_follower">
+            
+                    <p class = "music-lovers">' <span class = "twt-count">{{followers_count}}</span> ' music lovers follow her on twitter.</p>
+                    <p class = "music-lovers-next">If you're not one, follow her on social media and don't miss her updates.</p>
+                    <div class = "social-flex">
+                        <div class = "social">
+                            <a href="https://twitter.com/alessiacara" target="_blank"><i class="fab fa-twitter"></i></a>
+                        </div class = "social">
+                        <div class = "social">
+                            <a href="https://www.instagram.com/alessiasmusic/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                        <div class = "social">
+                            <a href="https://www.facebook.com/alessiacara" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                        <div class = "social">
+                            <a href="https://soundcloud.com/alessiacara" target="_blank"><i class="fab fa-soundcloud"></i></a>
+                        </div>
+                        <div class = "social">
+                            <a href="https://www.youtube.com/user/AlessiaCaraVEVO" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class = "made-by">
+        <p>Made with <span><i class="fas fa-heart"></i></span> by <a href="https://www.subassubedi.com/" target="_blank">Subas Subedi</a></p>
+    </div>
+    
+</body>
+
+
+<style type="text/css">
+    @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+    /*Reset*/
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    a {
+        text-decoration: none;
+    }
+    
+    /*Utility Classes*/
+    .container {
+        margin: auto;
+        max-width: 400px;
+        overflow: auto;
+        padding: 5px 8px;
+    }
+    
+    body {
+        /*background: url("/static/background_edited1.png");*/
+        background: #333 url('/static/background.png') no-repeat center center/cover;
+        height: 110vh;
+    }
+    
+    
+    header #navbar{
+        display: flex;
+        justify-content: space-between;
+        background: rgb(7, 55, 98);
+        padding: 1px 3px;
+        border-radius: 3px;
+    }
+    header #navbar .nav-item{
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+    header #navbar .nav-item a {
+        font-size: 1.0rem;
+        font-family: Arial, Helvetica, sans-serif;
+        color:#E7E7E7;
+        font-weight: 7.5;
+    }
+    header #navbar .nav-item:hover {
+        background: rgb(0,25,47);
+        transition: all 0.5s;
+    }
+    
+    #big-image .front-image {
+        display: block;
+        width: auto;
+        height: 320px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 5px 5px 20px 20px;
+    }
+    
+    #about-artist .about-flex {
+        border-radius: 5px 5px 20px 20px;
+        display: flex;
+        justify-content: space-between;
+        background: #DEE83E;
+    }
+    #about-artist .about-flex .small-image {
+        height: 65px;
+        width: 65px;
+        display: inline-block;
+        border-radius: 50%;
+        padding: 1px 3px;
+    }
+    #about-artist .about-flex .about {
+        padding: 2px 5px;
+    }
+    #about-artist .about-flex .about h1 {
+        font-family: 'Roboto', sans-serif;
+        padding-bottom: 1px;
+        color: #673642;
+    }
+    
+    #about-artist .about-flex .about h1 a:hover{
+        color: #0A7B76;
+        text-decoration: underline;
+        transition: 0.3s all;
+    }
+    
+    #about-artist .about-flex .about .album-name {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.85rem;
+        overflow: auto;
+    }
+    
+    #about-artist .about .view-lyrics{
+        font-size: 0.8rem;
+        height: auto;
+        width: 70px;
+        color: #DADADA;
+        background: #401B46;
+        padding: 2px 5px;
+        border-radius: 5px;
+    }
+    
+    #about-artist .about .view-lyrics:hover{
+        background: rgb(0,25,47);
+        transform: 0.3s all;
+    }
+    
+    #tweet-section .tweet-text {
+        display: block;
+        background: rgb(0,25,47);
+        border-radius: 5px 5px 20px 20px;
+        color: #F2F6F7;
+        font-size: 0.9rem;
+    }
+    
+    #tweet-section .tweet-text .recent-tweet-title{
+        padding-left: 3px;
+        padding-right: 2px;
+        padding-bottom: 1px;
+        padding-top: 2px;
+        font: 'Roboto', sans-serif;
+        font-size: 1.0rem;
+        color:#00acee;
+    }
+    
+    #tweet-section .tweet-text .recent-tweet-text {
+        padding-left: 7px;
+        padding-right: 2px;
+        padding-bottom: 5px;
+    }
+    
+    #tweet-section .more_follower {
+        background: #401B46;
+        border-radius: 5px 5px 20px 20px;
+        border-top: yellow dotted 1px;
+    }
+    
+    #tweet-section .more_follower .music-lovers {
+        color: #DDDEDB;
+        padding-top: 5px;
+        text-align: center;
+    }
+    
+    #tweet-section .more_follower .music-lovers .twt-count {
+        color: #00acee;
+    }
+    
+    #tweet-section .more_follower .music-lovers-next {
+        font-size: 0.85rem;
+        text-align: center;
+        color: grey;
+    }
+    
+    #tweet-section .social-flex{
+        padding: 5px 2px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    #tweet-section .social-flex .social a{
+        margin-right: 1rem;
+        font-size: 1.1rem;
+        color: grey;
+    }
+    
+    #tweet-section .social-flex .social a:hover{
+        color: #1ADAA4;
+        transform: 0.3s all;
+    }
+    
+    
+    .made-by{
+        color: #F2F6F7;
+        font-size: 0.90rem;
+        font-family: 'Source Code Pro', monospace;
+        color: white;
+        bottom: 2px;
+        right: 3px;
+        position: fixed;
+    }
+    .made-by .fas {
+        color: #00192f;
+    }
+    .made-by a {
+        color: #7AF2E5;
+    }
+    
+    .made-by a:hover{
+        color: yellow;
+        transform: 0.3s all;
+    }
+    
+</style>
+
+</html>

@@ -15,7 +15,7 @@ def index():
     oauth = requests_oauthlib.OAuth1(
         os.getenv("API_KEY"),
         os.getenv("API_SECRET_KEY"),
-        os.getenv("<ACCESS_TOKEN>"),
+        os.getenv("ACCESS_TOKEN"),
         os.getenv("ACCESS_TOKEN_SECRET")
         )
     # oauth = requests_oauthlib.OAuth1(

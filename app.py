@@ -13,10 +13,10 @@ def index():
     url = "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=alessiacara&exclude_replies=true&count=20"
     # Submitting Consumer API keys and Access token & access token secret
     oauth = requests_oauthlib.OAuth1(
-        "M0V2et56cbWEztaGyng2sRs0v",
-        "95tvu7fmfyHMidMLjfVQjsMizuAnLnG00iHoERj88PIfoYq8Fx",
-        "1469370974-X5gqdeacJvTLZL4D9KYRjIsWm4jOoxqeLX2VaxI",
-        "ZOAnVOjmckToiA7jtWP7zag5wjsAv1IRC8bb4OiHfuM2Q"
+        "API key",
+        "API secret key",
+        "Access token",
+        "Access token secret"
         )
     response = requests.get(url, auth = oauth)
     json_body1 = response.json()
@@ -31,7 +31,6 @@ def index():
     fc = json_body1[0]["user"]["followers_count"]
     random_num0 = random.randint(0,(len(tweets_list)-1))
     rt = tweets_list[random_num0]
-    
     
     # Genius API using Bearer autorization
     # Genious API url abstracted by artist id (394321), sorted by popularity and will get 20 responses per load

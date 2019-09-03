@@ -1,7 +1,7 @@
 # app.py
 
 #importing necessary libraries
-import flask, random, os, tweepy, requests, json, requests_oauthlib
+import flask, random, os, requests, json, requests_oauthlib
 
 app = flask.Flask(__name__)
 

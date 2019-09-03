@@ -13,11 +13,12 @@ def index():
     url = "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=alessiacara&exclude_replies=true&count=20"
     # Submitting Consumer API keys and Access token & access token secret
     oauth = requests_oauthlib.OAuth1(
-        "API key",
-        "API secret key",
-        "Access token",
-        "Access token secret"
+        "API_key",
+        "API_secret_key",
+        "Access_token",
+        "Access_token_secret"
         )
+        
     response = requests.get(url, auth = oauth)
     json_body1 = response.json()
     # Using pyton's json library to make it more readable (in commented line below)
@@ -65,7 +66,8 @@ def index():
     ra = album_title_list[random_num2]
     riu = img_url_list[random_num2]
     rlu = lyrics_url_list[random_num2]
-
+    
+    print("hello world")
     return flask.render_template("index.html", random_tweet = rt, random_album = ra, random_image_url = riu, random_lyrics_url = rlu, followers_count = fc)
 
 

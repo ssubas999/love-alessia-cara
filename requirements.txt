@@ -1,2 +1,5 @@
 Flask
 requests
+requests_oauthlib
+json
+os

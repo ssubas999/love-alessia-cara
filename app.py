@@ -33,23 +33,6 @@ def index():
     rt = tweets_list[random_num0]
     
     
-    '''
-    #Alternative way of extracting information via Twitter API using wrapper library- Tweepy
-    
-    # It will download the home timeline tweets using tweepy
-    auth = tweepy.OAuthHandler("API key", "API secret key")
-    auth.set_access_token("Access token", "Access token secret")
-
-    api = tweepy.API(auth)
-
-    user_tweets = api.user_timeline(screen_name = 'alessiacara', count = 10)
-    tweet_list = []
-    for tweet in user_tweets:
-        tweet_list.append(tweet.text)
-    random_num1 = random.randint(0,9)
-    rt = tweet_list[random_num1]
-    '''
-    
     # Genius API using Bearer autorization
     # Genious API url abstracted by artist id (394321), sorted by popularity and will get 20 responses per load
     url = "https://api.genius.com/artists/394321/songs?sort=popularity&page=1&per_page=20"

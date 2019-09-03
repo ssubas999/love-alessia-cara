@@ -13,11 +13,17 @@ def index():
     url = "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=alessiacara&exclude_replies=true&count=20"
     # Submitting Consumer API keys and Access token & access token secret
     oauth = requests_oauthlib.OAuth1(
-        "API_key",
-        "API_secret_key",
-        "Access_token",
-        "Access_token_secret"
+        '<API_key>',
+        '<API_secret_key>',
+        '<Access_token>',
+        '<Access_token_secret>'
         )
+    # oauth = requests_oauthlib.OAuth1(
+    #     "M0V2et56cbWEztaGyng2sRs0v",
+    #     "95tvu7fmfyHMidMLjfVQjsMizuAnLnG00iHoERj88PIfoYq8Fx",
+    #     "1469370974-X5gqdeacJvTLZL4D9KYRjIsWm4jOoxqeLX2VaxI",
+    #     "ZOAnVOjmckToiA7jtWP7zag5wjsAv1IRC8bb4OiHfuM2Q"
+    #     )
         
     response = requests.get(url, auth = oauth)
     json_body1 = response.json()

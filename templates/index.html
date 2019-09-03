@@ -6,14 +6,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Link to the css file-->
-    <link rel="stylesheet" href="/static/style.css">
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css"
         integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous" />
     <!-- Link for Source Code Pro fonts (font-family: 'Source Code Pro', monospace;) -->
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
-    <title>We Love Alessia Cara</title>
+    <!-- Link for Source Code Pro fonts (font-family: font-family: 'Roboto', sans-serif;) -->
+    <link href="'https://fonts.googleapis.com/css?family=Roboto&display=swap'" rel="stylesheet">
+    <title>Alessia Cara | We Love You</title>
 </head>
 <body>
     <header>
@@ -96,7 +96,6 @@
 
 
 <style type="text/css">
-    @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
     /*Reset*/
     * {
         margin: 0;
@@ -111,7 +110,7 @@
         margin: auto;
         max-width: 400px;
         overflow: auto;
-        padding: 5px 8px;
+        padding: 3px 8px;
     }
     
     body {
@@ -125,7 +124,7 @@
         display: flex;
         justify-content: space-between;
         background: rgb(7, 55, 98);
-        padding: 1px 3px;
+        padding: 3px 3px;
         border-radius: 3px;
     }
     header #navbar .nav-item{
@@ -139,7 +138,7 @@
         font-weight: 7.5;
     }
     header #navbar .nav-item:hover {
-        background: rgb(0,25,47);
+        background: rgb(133, 56, 134);
         transition: all 0.5s;
     }
     
@@ -159,11 +158,12 @@
         background: #DEE83E;
     }
     #about-artist .about-flex .small-image {
-        height: 65px;
-        width: 65px;
+        height: 70px;
+        width: 70px;
         display: inline-block;
         border-radius: 50%;
-        padding: 1px 3px;
+        padding-top: 3px;
+        padding-left: 2px;
     }
     #about-artist .about-flex .about {
         padding: 2px 5px;
@@ -181,15 +181,16 @@
     }
     
     #about-artist .about-flex .about .album-name {
+        padding-bottom: 2px;
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 0.85rem;
+        font-size: 0.90rem;
         overflow: auto;
     }
     
     #about-artist .about .view-lyrics{
-        font-size: 0.8rem;
+        font-size: 0.85rem;
         height: auto;
-        width: 70px;
+        width: 80px;
         color: #DADADA;
         background: #401B46;
         padding: 2px 5px;
@@ -198,6 +199,7 @@
     
     #about-artist .about .view-lyrics:hover{
         background: rgb(0,25,47);
+        color:#DEE83E;
         transform: 0.3s all;
     }
     
@@ -222,7 +224,7 @@
     #tweet-section .tweet-text .recent-tweet-text {
         padding-left: 7px;
         padding-right: 2px;
-        padding-bottom: 5px;
+        padding-bottom: 8px;
     }
     
     #tweet-section .more_follower {
@@ -233,7 +235,7 @@
     
     #tweet-section .more_follower .music-lovers {
         color: #DDDEDB;
-        padding-top: 5px;
+        padding-top: 8px;
         text-align: center;
     }
     
@@ -248,14 +250,15 @@
     }
     
     #tweet-section .social-flex{
-        padding: 5px 2px;
+        padding-top: 8px;
+        padding-bottom: 3px;
         display: flex;
         justify-content: center;
     }
     
     #tweet-section .social-flex .social a{
         margin-right: 1rem;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         color: grey;
     }
     
@@ -275,7 +278,7 @@
         position: fixed;
     }
     .made-by .fas {
-        color: #00192f;
+        color: red;
     }
     .made-by a {
         color: #7AF2E5;

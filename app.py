@@ -18,12 +18,6 @@ def index():
         os.getenv("ACCESS_TOKEN"),
         os.getenv("ACCESS_TOKEN_SECRET")
         )
-    # oauth = requests_oauthlib.OAuth1(
-    #     "M0V2et56cbWEztaGyng2sRs0v",
-    #     "95tvu7fmfyHMidMLjfVQjsMizuAnLnG00iHoERj88PIfoYq8Fx",
-    #     "1469370974-X5gqdeacJvTLZL4D9KYRjIsWm4jOoxqeLX2VaxI",
-    #     "ZOAnVOjmckToiA7jtWP7zag5wjsAv1IRC8bb4OiHfuM2Q"
-    #     )
         
     response = requests.get(url, auth = oauth)
     json_body1 = response.json()
@@ -42,7 +36,8 @@ def index():
     # Genius API using Bearer autorization
     # Genious API url abstracted by artist id (394321), sorted by popularity and will get 20 responses per load
     url = "https://api.genius.com/artists/394321/songs?sort=popularity&page=1&per_page=20"
-    my_headers = {"Authorization": "Bearer Bxi5CY7701gxpWiHC32WaItkXKU2Auk0v2p5K30rVEvOFfvq9xMg61Ig1mR_xnSQ"}
+    my_headers = {"Authorization": os.getenv("BEARER_KEY")}
+    # my_headers = {"Authorization": "Bearer Bxi5CY7701gxpWiHC32WaItkXKU2Auk0v2p5K30rVEvOFfvq9xMg61Ig1mR_xnSQ"}
     response = requests.get(url, headers = my_headers)
     # Using pyton's json library to make it more readable | .json() will return the response as json formatted string (more like a combination of lists and dictionary)
     # The u- prefix just means(when you print json data) that you have a Unicode string. When you really use the string, it won't appear in your data.

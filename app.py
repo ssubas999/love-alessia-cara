@@ -37,7 +37,6 @@ def index():
     # Genious API url abstracted by artist id (394321), sorted by popularity and will get 20 responses per load
     url = "https://api.genius.com/artists/394321/songs?sort=popularity&page=1&per_page=20"
     my_headers = {"Authorization": os.getenv("BEARER_KEY")}
-    # my_headers = {"Authorization": "Bearer Bxi5CY7701gxpWiHC32WaItkXKU2Auk0v2p5K30rVEvOFfvq9xMg61Ig1mR_xnSQ"}
     response = requests.get(url, headers = my_headers)
     # Using pyton's json library to make it more readable | .json() will return the response as json formatted string (more like a combination of lists and dictionary)
     # The u- prefix just means(when you print json data) that you have a Unicode string. When you really use the string, it won't appear in your data.
@@ -68,7 +67,6 @@ def index():
     riu = img_url_list[random_num2]
     rlu = lyrics_url_list[random_num2]
     
-    print("hello world")
     return flask.render_template("index.html", random_tweet = rt, random_album = ra, random_image_url = riu, random_lyrics_url = rlu, followers_count = fc)
 
 
